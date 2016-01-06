@@ -1,0 +1,27 @@
+{
+  "authors" : {
+    "Boris Bügling" : "boris@buegling.com"
+  },
+  "summary": "MAKE EMOJI GREAT AGAIN!",
+  "source" : {
+    "git" : "https:\/\/github.com\/neonichu\/electronic-moji.git",
+    "tag" : "0.0.1"
+  },
+  "dependencies" : {
+    "STRegex" : [
+      ">= 0.0.0",
+      "< 1.0.0"
+    ]
+  },
+  "version" : "0.0.1",
+  "homepage" : "https:\/\/github.com\/neonichu\/electronic-moji",
+  "license" : "MIT",
+  "platforms" : {
+    "osx" : "10.10",
+    "ios": "8.0",
+    "watchos": "2.0",
+    "tvos": "9.0"
+  },
+  "source_files" : "Sources/Emoji",
+  "name" : "Emoji"
+}
