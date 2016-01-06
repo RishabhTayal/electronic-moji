@@ -4,7 +4,7 @@ import Regex
 private let url = NSURL(string: "http://unicode.org/emoji/charts/full-emoji-list.html")!
 
 /// Fetch list of emoji characters from Unicode.org
-public func all_emoji(completion: ([Character]) -> ()) -> NSURLSessionDataTask {
+func all_emoji(completion: ([Character]) -> ()) -> NSURLSessionDataTask {
 	let config = NSURLSessionConfiguration.defaultSessionConfiguration()
 	let session = NSURLSession(configuration: config)
 
@@ -22,7 +22,7 @@ public func all_emoji(completion: ([Character]) -> ()) -> NSURLSessionDataTask {
 	return task
 }
 
-public func generate_swift_code(chars: [Character]) -> String {
+func generate_swift_code(chars: [Character]) -> String {
 	let all_chars = chars.map { "\"\($0)\"" }.joinWithSeparator(",")
 	return "public let EMOJI: [Character] = [ \(all_chars) ]"
 }
