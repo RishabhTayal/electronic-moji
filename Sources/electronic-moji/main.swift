@@ -1,5 +1,6 @@
 import AppKit
 import Commander
+import Emoji
 
 command { (arg: String) in
 	NSApplicationLoad()
