@@ -24,5 +24,5 @@ public func all_emoji(completion: ([Character]) -> ()) -> NSURLSessionDataTask {
 
 public func generate_swift_code(chars: [Character]) -> String {
 	let all_chars = chars.map { "\"\($0)\"" }.joinWithSeparator(",")
-	return "public let EMOJI = [ \(all_chars) ]"
+	return "public let EMOJI: [Character] = [ \(all_chars) ]"
 }

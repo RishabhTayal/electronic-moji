@@ -1,9 +1,15 @@
-.PHONY: all clean
+BUILD_DIR=./.build/debug
 
-all:
-	swift build
-	./.build/debug/electronic-moji smiling
+.PHONY: all clean lib
+
+all: lib
+	$(BUILD_DIR)/electronic-moji smiling
 
 clean:
 	swift build --clean
 
+lib:
+	swift build
+
+Sources/Emoji/AllEmoji.swift:
+	$(BUILD_DIR)/generator >$@
