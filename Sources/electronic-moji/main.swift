@@ -15,4 +15,4 @@ command { (arg: String) in
 	if let string = matchStrings.first {
 		fillPasteboard(string)
 	}
-}.run()
+}.run("0.0.2")
